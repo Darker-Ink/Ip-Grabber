@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "name": "simple-ip-grabber",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Darker-Ink/Simple-Ip-Grabber.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Darker-Ink/Simple-Ip-Grabber/issues"
+  },
+  "homepage": "https://github.com/Darker-Ink/Simple-Ip-Grabber#readme"
+}
