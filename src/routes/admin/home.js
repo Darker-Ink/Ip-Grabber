@@ -1,3 +1,4 @@
+const config = require("../../config.json");
 module.exports = {
     path: "/",
     method: "get",
@@ -8,6 +9,12 @@ module.exports = {
      * @param {import("express").NextFunction} next
      */
     run: async (req, res, next) => {
-        res.send("Hello World!");
+        if(config.admin.ipWhitelist && !config.admin.ipWhitelist.includes(req.realip)) {
+            res.status(403).send("403 Forbidden");
+            return;
+        }
+
+        res.send("Hello!");
+
     }
 }
