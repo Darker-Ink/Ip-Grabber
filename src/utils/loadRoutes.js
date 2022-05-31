@@ -1,5 +1,5 @@
-const path = require("node:path");
-const fs = require("node:fs");
+const path = require('node:path');
+const fs = require('node:fs');
 
 
 const dirPath = (dir, routePaths) => {
@@ -23,16 +23,16 @@ const routeAppPath = (file) => {
     const routeData = require(file)
 
     if (routeData.path) {
-        const routePath = file.substring(file.indexOf("/routes/") + 8);
+        const routePath = file.substring(file.indexOf('/routes/') + 8);
 
-        const updatedPath = path.join(routePath.substring(0, routePath.lastIndexOf("/")), routeData.path);
+        const updatedPath = path.join(routePath.substring(0, routePath.lastIndexOf('/')), routeData.path);
 
-        return updatedPath.startsWith("/") ? updatedPath : `/${updatedPath}`;
+        return updatedPath.startsWith('/') ? updatedPath : `/${updatedPath}`;
     }
 }
 
 const loadRoutes = (app) => {
-    const routesPath = path.join(__dirname, "../routes");
+    const routesPath = path.join(__dirname, '../routes');
     const routePaths = dirPath(routesPath);
 
     for (const routePath of routePaths) {
