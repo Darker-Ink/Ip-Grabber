@@ -92,6 +92,10 @@ const UserSchema = new mongoose.Schema({
 
     loginTokenExpires: DateTypeNull, // The expiration date of the login token
 
+    emailVerificationToken: StringTypeUNR, // The token to verify the email (hashed)
+
+    emailVerificationExpires: DateTypeNull, // The expiration date of the email verification token
+
     blocked: {
         type: Boolean,
         default: false,
