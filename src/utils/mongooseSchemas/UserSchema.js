@@ -77,10 +77,9 @@ const UserSchema = new mongoose.Schema({
     bannedReason: StringTypeNR, // The reason why the user is banned
 
     bannedBy: {
-        ref: 'User',
+        type: String,
         default: null,
-        required: false,
-    }, // The user who banned the user
+    }, // The user id who banned the user
 
     ips: {
         type: Array,
