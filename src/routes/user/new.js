@@ -1,3 +1,5 @@
+const UserSchema = require('../../utils/mongooseSchemas/UserSchema');
+
 module.exports = {
     path: '/new',
     method: 'post',
@@ -8,6 +10,10 @@ module.exports = {
      * @param {import('express').NextFunction} next
      */
     run: async (req, res, next) => {
-        res.send('Hello World!');
-    }
-}
+        const { username, email, password } = req.body;
+
+        if (!username || !email || !password) {
+            return res.status(400).send(`Missing ${!username ? 'username' : !email ? 'email' : 'password'}`);
+        }
+    },
+};

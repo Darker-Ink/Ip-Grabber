@@ -8,5 +8,6 @@
         "ipWhitelist": [
             "0.0.0.0"
         ]
-    }
+    },
+    "redis": "redis://default@localhost:6379"
 }

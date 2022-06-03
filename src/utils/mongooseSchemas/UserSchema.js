@@ -36,7 +36,7 @@ const StringTypeNR = {
 
 const UserSchema = new mongoose.Schema({
 
-    id: StringTypeUnique, // The user's unique ID. (unique)
+    userId: StringTypeUnique, // The user's unique ID. (unique)
 
     username: StringTypeUnique, // The Username of the user (unique)
 
