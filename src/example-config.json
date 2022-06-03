@@ -9,5 +9,6 @@
             "0.0.0.0"
         ]
     },
-    "redis": "redis://default@localhost:6379"
+    "redis": "redis://default@localhost:6379",
+    "JWT_SECRET": "secret"
 }
